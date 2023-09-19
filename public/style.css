@@ -1,0 +1,40 @@
+body{
+    margin-left: 30px;
+
+
+}
+.chat{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 16px;
+    display: inline-block;
+    margin: 10px;
+    width: 40vw;
+
+}
+.msg{
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 14px;
+
+}
+button{
+    text-decoration: none;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    height: 2rem;
+    width: 4rem;
+}
+.newchat{
+    z-index: 10;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    height: 3rem;
+    width: 5rem;
+}
+input{
+    background-color: azure;
+}
