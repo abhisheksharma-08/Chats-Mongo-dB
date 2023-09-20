@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniWhatsapp</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <h1>Whatsapp</h1>
@@ -15,14 +16,15 @@
         <p>To: <b><%=chat.to%></b></p>
         <p class="msg">MSG : <%=chat.msg%></p>
         <br>
-        <form method="get" action="/chats/<%=chat._id%>/edit">
-            <button>Edit</button>
-        </form>
-        <br>
-        <form method="post" action="/chats/<%=chat._id%>?_method=DELETE">
-            <button>Delete</button>
+        <div class="icon">
+        <form class="edit" method="get" action="/chats/<%=chat._id%>/edit">
+            <button><i class="fa-solid fa-pen-to-square"></i></button>
         </form>
         
+        <form class="delete" method="post" action="/chats/<%=chat._id%>?_method=DELETE">
+            <button><i class="fa-solid fa-trash"></i></button>
+        </form>
+    </div>
         
         <p><%=chat.created_at.toString().split(" ")[4]%></p>
         <p><%=chat.created_at.toString().split(" ").slice(0,4).join("        ")%></p>
@@ -38,7 +40,7 @@
    <% }%>
 
    <form method="get" action="/chats/new">
-    <button class="newchat">New Chat</button>
+    <button class="newchat"><i class="fa-solid fa-plus fa-lg" style="color: #146aff;"></i></button>
    </form>
 
 </body>
